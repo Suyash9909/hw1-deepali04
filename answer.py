@@ -125,24 +125,22 @@ def dictionary_nested():
     #   "age" => 85
 
     Grace ={
-        "name"  : {"first_name" : "Grace",
-                  "last_name" : "Hopper"
-                },
+        "name"  : { "first_name" : "Grace", "last_name" : "Hopper" },
         "jobs" : ["scientist", "engineer"],
         "age"  : 85
     }
 
     # Get the value of key "last_name" from the subdictionary of key "name" in dictionary Grace. (aka."Hopper")
 
-    last_name = 
+    last_name = Grace["name"]["last_name"]
 
     # Add "programmer" to the list that key "jobs" maps to.
 
-
+    Grace["jobs"].append('programmer')
 
     # Get the third item in the list that key "job" maps to. (the item  you recently added)
     
-    job = ""
+    job = Grace["jobs"][2]
 
 
 
@@ -155,4 +153,4 @@ strings()
 list_1D()
 list_2D()
 dictionary()
-dictionary_nested()
+print(dictionary_nested())
